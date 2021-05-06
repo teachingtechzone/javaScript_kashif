@@ -226,3 +226,182 @@
 
 
 // // 4 may 2021 kashif hamza
+
+
+
+// // // problem
+// function looping() {
+
+//     for (var i = 0; i < 6; i++) { // i should be exist in this block scope
+//         console.log("inner loop" + i); // 1-5
+//     }
+
+//     console.log("outer loop" + i); // 1-5
+// }
+
+// console.log(i) // it should behave like this
+
+// looping();
+// // var -> function scope
+
+
+// // solution es6-2015
+// function looping() {
+
+//     for (let i = 0; i < 6; i++) { // i should be exist in this block scope
+//         console.log("inner loop" + i); // 1-5
+//     }
+//     // let i = 5;
+//     console.log(i) // will throw error
+// }
+// looping();
+// // console.log(i) // Obvisly it won't
+// // // let -> block scope
+
+
+
+// using constant
+// const discount = 50;
+// discount = 6;
+// console.log(discount)
+
+
+
+// // using let 
+// let discount = 50;
+// discount = 6;
+// console.log(discount)
+
+
+// let myArr = ["Fan", "Camera", 34, null, true];
+// // // Array Methods
+// for (let index = 0; index < myArr.length; index++) {
+//     const element = myArr[index];
+//     console.log(element)
+
+// }
+// // // console.log(myArr.length);
+// console.log("------------")
+// it will remove element from ending
+// myArr.pop(); // permenently
+
+// for (let index = 0; index < myArr.length; index++) {
+//     const element = myArr[index];
+//     console.log(element)
+
+// }
+// console.log(myArr.length)
+// myArr.push("kashan")
+// for (let index = 0; index < myArr.length; index++) {
+//     const element = myArr[index];
+//     console.log(element)
+
+// }
+
+
+
+
+
+// // it will remove element from starting
+// myArr.shift()
+
+
+// for (let index = 0; index < myArr.length; index++) {
+//     const element = myArr[index];
+//     console.log(element)
+
+// }
+// console.log(myArr.length)
+
+
+// // it will add element at starting
+// const newLen = myArr.unshift("Nihal")
+// console.log(newLen);
+// console.log(myArr);
+
+// // // String Methods in JavaScript
+// let mystring = "javaScript is a client side scripting language, Do you know javaScript? yes! it is.";
+// // console.log(mystring.length)
+// console.log(mystring.indexOf("good")) // will return -1
+// console.log(mystring.indexOf("is")) // find first occurance
+// console.log(mystring.lastIndexOf("is")) // find last occurance
+
+//basic javaScript except let var const
+
+
+
+
+
+// Objects key value pair
+
+
+
+// const person = {
+//     name: "Ali",
+//     talk() {
+//         return "can talk";
+//     }
+// }
+
+
+// console.log(person.name)
+// person.name = "ahsan";
+// console.log(person.name)
+// console.log(person["name"])
+// console.log(person.talk())
+// console.log(person["talk()"]) // dont access method like this
+
+
+
+
+// // this
+
+
+// const person = {
+//     name: "Ali",
+//     talk() {
+//         console.log(this); // return refrence of current object
+//     }
+// }
+
+// // person.talk();
+
+
+// // // now see the behavir
+
+// const talk1 = person.talk; // reference to the function not called it
+// // console.log(talk1)
+// talk1();
+
+// // if call function as method on object it will return refrence to that object
+// // now if we call function as standalone or outside object this will return global object , the window object
+
+
+
+
+
+
+
+
+// // Solution
+// // note that every function in javaScript is an object
+
+
+
+
+// const person = {
+//     name: "Ali",
+//     talk() {
+
+//         console.log(this); // return refrence of current object
+
+//     }
+// }
+
+// // // type dot to see all members and methods
+// // person.talk. 
+
+// // // now use bind method to solve this problem
+// const talk2 = person.talk.bind(person) // :)
+
+// talk2()
