@@ -1,3 +1,13 @@
+// kashif + hamza
+
+// html
+// CSS
+// javascript
+// bootstarp
+// jquery
+// php
+// mysqli
+
 // // 1. Ways to print in JavaScript
 // // console.log("Hello World");
 // // alert("me");
@@ -331,7 +341,7 @@
 
 
 
-
+// es5+ concepts
 // Objects key value pair
 
 
@@ -405,3 +415,100 @@
 // const talk2 = person.talk.bind(person) // :)
 
 // talk2()
+
+
+// third class start
+
+
+// // insert Element at any position 
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(2, 0, "Lemon", "tomato"); // starting index, number of elements to delete, array of elements
+
+// console.log(fruits);
+
+
+// // insert Element at any position - delete example
+// let fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits.splice(2, 1, "Lemon", "tomato"); // starting index, number of elements to delete, array of elements
+
+// console.log(fruits);
+
+
+// // replacing in string
+// let mystring = "im learning javaScript"
+// console.log(mystring.slice(1,4))
+// d = mystring.replace("javaScript", "php");
+// console.log(d)
+
+
+// basic ended 
+
+// es5+ started 
+
+
+
+
+
+
+
+
+
+
+
+
+// // Arrow function
+
+// const square = function(number) {
+//     return number * number;
+// }
+
+// // console.log(square) // refrence to the function
+// console.log(square(5)) // call the function
+
+
+
+//  // remove the following things and add 
+// // 1- function
+// // 2- =>  fat arrow
+
+
+// const square = (number) =>  {
+//     return number * number;
+// }
+
+// console.log(square(5));
+
+
+// // // if we have only single parameter exclude paranthesis
+
+// const square = number =>  {
+//     return number * number;
+// }
+
+// console.log(square(5))
+
+
+
+// // // if body have single line then exclude
+// // 1- curly braces 
+// // 2- retrun 
+
+
+// const square = number =>  number * number;
+
+
+// // now see difference
+// const square = function(number) {
+//     return number * number;
+// }
+
+// // // if have zero parameter then empty paranthesis
+
+// const square1 = () =>  5;
+
+// const square = () =>  {
+//     return "asdf" ;
+// }
+
+
+// console.log(square1())
